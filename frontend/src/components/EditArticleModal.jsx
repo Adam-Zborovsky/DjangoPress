@@ -1,5 +1,4 @@
-// src/components/EditArticleModal.js
-import React, { useState } from "react";
+import { useState } from "react";
 import { updateArticle } from "../services/articleService";
 
 function EditArticleModal({ article, token, onClose, onArticleUpdated }) {

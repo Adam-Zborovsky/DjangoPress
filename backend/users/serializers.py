@@ -3,7 +3,6 @@ from rest_framework import serializers
 
 
 class UserSerializer(serializers.ModelSerializer):
-    # Expose is_staff as is_admin for clarity in API responses.
     is_admin = serializers.ReadOnlyField(source='is_staff')
 
     class Meta:

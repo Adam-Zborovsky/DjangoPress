@@ -1,5 +1,4 @@
-// src/components/EditCommentModal.js
-import React, { useState } from "react";
+import { useState } from "react";
 import { updateArticle } from "../services/articleService";
 
 function EditCommentModal({ comment, token, onClose, onCommentUpdated }) {
@@ -7,9 +6,7 @@ function EditCommentModal({ comment, token, onClose, onCommentUpdated }) {
 	const [error, setError] = useState(null);
 
 	const handleSave = async () => {
-		// For simplicity, we'll assume an updateComment function exists in commentService.
 		try {
-			// You’d need to implement updateComment in your commentService if not already.
 			const updated = await updateArticle(comment.id, { content }, token);
 			onCommentUpdated(updated);
 			onClose();

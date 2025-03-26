@@ -1,5 +1,4 @@
-// src/pages/ArticleDetail.js
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import EditArticleModal from "../components/EditArticleModal";
 import EditCommentModal from "../components/EditCommentModal";
@@ -15,7 +14,7 @@ function ArticleDetail({ token, user }) {
 	const [comments, setComments] = useState([]);
 	const [newComment, setNewComment] = useState("");
 	const [editingArticle, setEditingArticle] = useState(false);
-	const [editingComment, setEditingComment] = useState(null); // holds comment being edited
+	const [editingComment, setEditingComment] = useState(null);
 
 	useEffect(() => {
 		const fetchArticle = async () => {
